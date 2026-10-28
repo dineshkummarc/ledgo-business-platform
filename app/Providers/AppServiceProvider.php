@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Facades\Schema;
 use App\Support\Integrations\AdminPanelConsole;
 use App\Support\Integrations\BulkSmsGateway;
 use App\Support\Integrations\DrutogotiProfiler;
@@ -33,6 +34,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+		Schema::defaultStringLength(191);
         //
     }
 }
